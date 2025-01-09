@@ -1,6 +1,6 @@
 import { useContext } from "react";
-import { selectBoxValueContext } from "./startPage";
-import { sortTypeContext } from "./startPage";
+import { selectBoxValueContext } from "../../pages/StartPage.jsx";
+import { sortTypeContext } from "../../pages/StartPage.jsx";
 import RadioButton from "./RadioButton.jsx";
 
 export default function SearchModeSelector(){

@@ -1,12 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-loop-func */
-import { KeySelectedContext } from "./startPage.jsx"
-import { KeyTempSelectedContext } from "./startPage.jsx"
-import { IsTempContext } from "./pianoPage"
+import { KeySelectedContext } from "../../pages/StartPage.jsx"
+import { KeyTempSelectedContext } from "../../pages/StartPage.jsx"
+import { IsTempContext } from "../../pages/PianoPage.jsx"
 import { useEffect, useContext, useState } from "react";
-import { LinedDistsContext } from "./startPage.jsx";
-import { selectBoxValueContext } from "./startPage.jsx";
-import { sortTypeContext } from "./startPage.jsx";
+import { LinedDistsContext } from "../../pages/StartPage.jsx";
+import { selectBoxValueContext } from "../../pages/StartPage.jsx";
+import { sortTypeContext } from "../../pages/StartPage.jsx";
 
 
 export const ChordDisplay = (props) => {
@@ -734,13 +734,6 @@ export const ChordDisplay = (props) => {
             <p id="main-display" style={{width: "1200px"}}>
                 {hitElemArr.map(e => e)}
             </p>
-                {/* <Select
-                    options={secondSortOptions}
-                    defaultValue={sortType[1]}
-                    onChange={(value) => {
-                    value ? setSortType((prev) => [prev[0], value]) : null;
-                    }}
-                /> */}
             <div className="display_status">類似するコード({preChords.length}個):</div>
             <p id="sub-display">
                 {preElemArr.map(e => e)}

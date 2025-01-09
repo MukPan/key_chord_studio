@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react";
-import { KeySelectedContext } from "./startPage.jsx"
-import { KeyTempSelectedContext } from "./startPage.jsx"
-import { IsTempContext } from "./pianoPage"
+import { KeySelectedContext } from "../../pages/StartPage.jsx"
+import { KeyTempSelectedContext } from "../../pages/StartPage.jsx"
+import { IsTempContext } from "../../pages/PianoPage.jsx"
 
 export default function PianoControler(){
     const { isSelectedArr, setIsSelectedArr } = useContext(KeySelectedContext);

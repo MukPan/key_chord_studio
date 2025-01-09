@@ -3,7 +3,7 @@ import './styles/pianoStyle.css'
 import './styles/Home.module.css'
 
 import ReactDOM from 'react-dom/client'
-import StartPage from "./components/startPage.jsx";
+import StartPage from "./pages/StartPage.jsx";
 
 const app = document.getElementById('app');
 

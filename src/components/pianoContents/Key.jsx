@@ -1,7 +1,7 @@
 import { useState, memo, useContext, useEffect } from "react";
-import { KeySelectedContext } from "./startPage"
-import { KeyTempSelectedContext } from "./startPage"
-import { IsTempContext } from "./pianoPage"
+import { KeySelectedContext } from "../../pages/StartPage.jsx"
+import { KeyTempSelectedContext } from "../../pages/StartPage.jsx"
+import { IsTempContext } from "../../pages/PianoPage.jsx"
 
 export const Key = memo((props) => {
     const {keyname, className, dist, style} = props;

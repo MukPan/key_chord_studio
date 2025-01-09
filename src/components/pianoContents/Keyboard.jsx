@@ -1,10 +1,9 @@
-
-import { Key } from "./Key";
+import { Key } from "./Key.jsx";
 import { memo, useContext } from "react";
 import { useRef, useEffect } from "react";
-import { KeySelectedContext } from "./startPage.jsx";
-import { KeyTempSelectedContext } from "./startPage.jsx";
-import { useGetSoundPlayer } from "../hooks/useGetSoundPlayer";
+import { KeySelectedContext } from "../../pages/StartPage.jsx";
+import { KeyTempSelectedContext } from "../../pages/StartPage.jsx";
+import { useGetSoundPlayer } from "../../hooks/useGetSoundPlayer.tsx";
 
 
 //ここから音が出てる
