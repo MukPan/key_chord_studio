@@ -1,6 +1,7 @@
 // import React from 'react';
 import { useState, useRef, createContext } from "react";
 import PianoPage from "./PianoPage.jsx";
+import Header from "../components/Header.jsx";
 
 export const LinedDistsContext = createContext({});
 export const KeySelectedContext = createContext({});
@@ -9,6 +10,7 @@ export const SortChordArrContext = createContext({});
 export const selectBoxValueContext = createContext({});
 export const sortTypeContext = createContext({});
 
+//Contextを読み込むところ
 export default function StartPage(){
   /*絞り込み方法*/
   const narDownOptions = [
@@ -53,9 +55,8 @@ export default function StartPage(){
             <KeySelectedContext.Provider value={{isSelectedArr, setIsSelectedArr}}>
               <KeyTempSelectedContext.Provider value={{isTempSelectedArr, setIsTempSelectedArr}}>
                 <LinedDistsContext.Provider value={{linedDistsArr, setLinedDistsArr}}>
-                  <div className="d-flex flex-row w-100" style={{zIndex: "0",position: "absolute" , width: "100%"}}>
-                    <PianoPage mode={1}/>
-                  </div>
+                  <Header/>
+                  <PianoPage/>
                 </LinedDistsContext.Provider>
               </KeyTempSelectedContext.Provider>
             </KeySelectedContext.Provider>

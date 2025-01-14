@@ -3,7 +3,7 @@ import { KeySelectedContext } from "../../pages/StartPage.jsx"
 import { KeyTempSelectedContext } from "../../pages/StartPage.jsx"
 import { IsTempContext } from "../../pages/PianoPage.jsx"
 
-export default function PianoControler(){
+export default function PianoControler() {
     const { isSelectedArr, setIsSelectedArr } = useContext(KeySelectedContext);
     const { isTempSelectedArr, setIsTempSelectedArr} = useContext(KeyTempSelectedContext); //仮
     const {isTemp, setIsTemp} = useContext(IsTempContext); //false:本有効 true:仮有効
@@ -78,7 +78,7 @@ export default function PianoControler(){
     const moveOctaveLeftButtonStyle = {
         width: "127px",
         height: "50px",
-        fontSize: "5px",
+        fontSize: "15px",
         position: "relative",
         gridArea: "2 / 1 / 3 / 2"
     }
@@ -86,7 +86,7 @@ export default function PianoControler(){
     const moveOctaveRightButtonStyle = {
         width: "127px",
         height: "50px",
-        fontSize: "5px",
+        fontSize: "15px",
         position: "relative",
         gridArea: "2 / 2 / 3 / 3"
     }
@@ -94,31 +94,31 @@ export default function PianoControler(){
     const turnRightButtonStyle = {
         width: "127px",
         height: "50px",
-        fontSize: "5px",
+        fontSize: "15px",
         gridArea: "3 / 1 / 4 / 2"
     }
 
     const turnLeftButtonStyle = {
         width: "127px",
         height: "50px",
-        fontSize: "5px",
+        fontSize: "15px",
         gridArea: "3 / 2 / 4 / 3"
     }
 
     const clearButtonStyle = {
-        width: "60px",
+        width: "100px",
         height: "162px",
-        fontSize: "5px",
+        fontSize: "15px",
         gridArea: "1 / 3 / 4 / 4"
     }
 
     const parentStyle =  {
         display: "grid",
-        gridTemplateColumns: "repeat(2, 125px) 60px",
+        gridTemplateColumns: "repeat(2, 125px) 100px",
         gridTemplateRows: "64px repeat(2, 48px)",
         gridColumnGap: "0px",
         gridRowGap: "0px"
-        }
+    }
 
 
     return(
