@@ -27,7 +27,6 @@ li {
 /* コード候補ディスプレイ全体 */
 #main-display {
     padding-top: 20px;
-    width: 1300px;
     height: 140px;
 }
 

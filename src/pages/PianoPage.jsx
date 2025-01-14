@@ -5,6 +5,7 @@ import { ChordDisplay } from '../components/pianoContents/ChordDisplay.jsx'
 import PianoControler from "../components/pianoContents/PianoControler.jsx"
 import SearchModeSelector from "../components/pianoContents/SearchModeSelector.jsx"
 import { useState, useEffect, createContext, useRef } from "react";
+import {PlaybackSection} from "../components/PlaybackSection.jsx";
 
 export const IsTempContext = createContext({});
 
@@ -16,25 +17,20 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
   }
 
   const predictChordAreaStyle = {
-    margin: "20px 0 0 0",
-    padding: "0 20px 0 0",
-    // backgroundColor: "#f3fbff",
+    margin: "20px 0",
     display: "flex",
     alignItems: "center",
   }
 
-  const keyboardAreaStyle = {
-    // height: "250px",
-    // display: "flex",
-    // alignItems: "flex-start",
-    // gap: "20px",
-    // position: "fixed",
-    // top: "60px",
-    // left: "150px",
-    // width: "1300px",
-    // height: "250px",
-    // backgroundColor: "#87cefa",
-    // zIndex: "99"
+  const headlineTextStyle = {
+    fontSize: "20px",
+    marginRight: "10px",
+    textAlign: "center",
+    width: "80px",
+    // padding: "18px 0",
+    backgroundColor: "#f3fbff",
+    height: "100%",
+    fontWeight: "bold",
   }
 
   const keyboardSectionStyle = {
@@ -61,29 +57,24 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
     // display: "flex"
   }
 
-  const searchModeSelectorStyle = {
-    // zIndex: "99",
-    // position: "fixed",
-    // top: "270px",
-    // left: "180px",
-  }
-
-  const chordDisplayStyle = {
+  const predictChordDisplayStyle = {
     backgroundColor: "#f3fbff",
     width: "95%",
     margin: "0 0 0 3px",
     padding: "0 0 0 30px",
   }
 
-  const headlineTextStyle = {
-    fontSize: "20px",
-    marginRight: "10px",
-    textAlign: "center",
-    width: "80px",
-    padding: "18px 0",
-    backgroundColor: "#f3fbff",
-    fontWeight: "bold",
+  const playChordDisplayStyle = {
+    backgroundColor: "rgb(200,200,200)",
+    width: "95%",
+    height: "140px",
+    margin: "0 0 0 3px",
+    padding: "0 0 0 30px",
+    display: "flex",
+    alignItems: "center",
+    overflowX: "scroll",
   }
+
 
 
   const chordAreaStyle = {
@@ -107,13 +98,19 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
   return (
     <IsTempContext.Provider value={{isTemp, setIsTemp}}>
       <div id="pianoPage" style={pianoPageStyle}>
-        {/*入力コード表示エリア*/}
-        <div id="predictChordArea" style={chordAreaStyle}>
-          {/*<ChordDisplay />*/}
+
+        {/*再生コード表示エリア*/}
+        <div style={predictChordAreaStyle}>
+          <div id="headlineText" style={headlineTextStyle}>
+            <p>再生<br/>コード</p>
+          </div>
+          <div style={playChordDisplayStyle}>
+            <PlaybackSection/>
+          </div>
         </div>
 
         {/*キーボードエリア*/}
-        <div id="keyboardArea" style={keyboardAreaStyle}>
+        <div id="keyboardArea">
           {/*ピアノコントローラ*/}
           <div style={pianoControlerStyle}>
             <PianoControler/>
@@ -127,12 +124,11 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
         {/*一致コード表示エリア*/}
         <div style={predictChordAreaStyle}>
           <div id="headlineText" style={headlineTextStyle}>
-            <p style={headlineTextStyle}>一致<br/>コード</p>
+            <p>一致<br/>コード</p>
           </div>
-          <div style={chordDisplayStyle}>
+          <div style={predictChordDisplayStyle}>
             <ChordDisplay/>
           </div>
-
         </div>
 
       </div>

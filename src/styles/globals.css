@@ -12,8 +12,9 @@ a {
 }
 
 ul {
-  list-style: none;
-  padding-left: 0;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 * {
@@ -21,16 +22,23 @@ ul {
 }
 
 .DisplayCards{
-    height: 80px;
-    width: 120px;
+    height: 90px;
+    width: auto;
+    padding: 0 20px;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
     background-color: #FFFFFF;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-left: 5px;
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
+    font-weight: bold;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 8px;
+}
+
+#lined-chords {
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 /* @media (prefers-color-scheme: dark) {

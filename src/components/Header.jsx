@@ -10,7 +10,7 @@ import { KeySelectedContext } from "./../pages/StartPage.jsx";
 // import { SortChordArrContext } from "./../pages/StartPage.jsx";
 import { selectBoxValueContext } from "./../pages/StartPage.jsx";
 
-
+//左の再生欄
 export const Header = () => {
     // console.log("Headerレンダリング");
     const {PlayFuncs, StopFuncs} = useGetSoundPlayer();

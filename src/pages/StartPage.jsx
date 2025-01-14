@@ -12,6 +12,7 @@ export const sortTypeContext = createContext({});
 
 //Contextを読み込むところ
 export default function StartPage(){
+  document.oncontextmenu = () => false; //右クリック禁止
   /*絞り込み方法*/
   const narDownOptions = [
     { value: "simiR", label: "類似(ルート音固定)" },
@@ -55,7 +56,6 @@ export default function StartPage(){
             <KeySelectedContext.Provider value={{isSelectedArr, setIsSelectedArr}}>
               <KeyTempSelectedContext.Provider value={{isTempSelectedArr, setIsTempSelectedArr}}>
                 <LinedDistsContext.Provider value={{linedDistsArr, setLinedDistsArr}}>
-                  <Header/>
                   <PianoPage/>
                 </LinedDistsContext.Provider>
               </KeyTempSelectedContext.Provider>
