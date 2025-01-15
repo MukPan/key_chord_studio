@@ -10,6 +10,13 @@ import { sortTypeContext } from "../../pages/StartPage.jsx";
 
 
 export const ChordDisplay = (props) => {
+  //propsからstyleを取り出す
+  const {
+    predictChordAreaStyle,
+    headlineTextStyle,
+    predictChordDisplayStyle,
+  } = props;
+
   let DraggingElem;
   // console.log("ChordDisplayレンダリング");
 
@@ -451,6 +458,7 @@ export const ChordDisplay = (props) => {
 
   //表示配列生成
   const hitElemArr = [];
+  const nextElemArr = [];
 
   // const mainChordsStyle = {
   //     color: "#4d3d3d",
@@ -612,9 +620,27 @@ onContextMenu={() => addToDisplay(chord)}
 
   return (
     <>
-      <p id="main-display">
-        {hitElemArr.map(e => e)}
-      </p>
+      {/*一致コード*/}
+      <div style={predictChordAreaStyle}>
+        <p style={headlineTextStyle}>一致<br/>コード</p>
+        <div style={predictChordDisplayStyle}>
+          <p id="main-display">
+            {hitElemArr.map(e => e)}
+          </p>
+        </div>
+      </div>
+
+      {/*次コード*/}
+      <div style={predictChordAreaStyle}>
+        <p style={headlineTextStyle}>一致<br/>コード</p>
+        <div style={predictChordDisplayStyle}>
+          <p id="main-display">
+            {hitElemArr.map(e => e)}
+          </p>
+        </div>
+      </div>
     </>
+
+
   )
 }

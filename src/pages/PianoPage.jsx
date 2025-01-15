@@ -104,21 +104,12 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
           </div>
         </div>
 
-        {/*一致コード表示エリア*/}
-        <div style={predictChordAreaStyle}>
-          <p style={headlineTextStyle}>一致<br/>コード</p>
-          <div style={predictChordDisplayStyle}>
-            <ChordDisplay/>
-          </div>
-        </div>
-
-        {/*進行候補表示エリア*/}
-        <div style={predictChordAreaStyle}>
-          <p style={headlineTextStyle}>進行<br/>候補</p>
-          <div style={predictChordDisplayStyle}>
-            <ChordDisplay/>
-          </div>
-        </div>
+        {/*一致コード・次コード表示エリア*/}
+        <ChordDisplay
+          predictChordAreaStyle={predictChordAreaStyle}
+          headlineTextStyle={headlineTextStyle}
+          predictChordDisplayStyle={predictChordDisplayStyle}
+        />
 
       </div>
     </IsTempContext.Provider>
