@@ -550,7 +550,7 @@ export const ChordDisplay = (props) => {
   hitChords.forEach((chord, i) => {
     const mainChordsStyle = {
       color: "#4d3d3d",
-      fontSize: "60px",
+      fontSize: "45px",
       fontWeight: "bold",
       padding: "20px",
       borderRadius: "27px",

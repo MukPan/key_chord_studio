@@ -1,12 +1,4 @@
 @charset "utf-8";
-h1 {
-    color: #4d3d3d;
-    width: 270px;
-    border: solid;
-    border-color: #af9999;
-    background-color: #f2e5e5;
-    text-align: center;
-}
 
 p {
     user-select: none;

@@ -7,7 +7,6 @@ import { KeySelectedContext } from "./../pages/StartPage.jsx";
 import { selectBoxValueContext } from "./../pages/StartPage.jsx";
 
 //再生欄
-//TODO: ボタンをいい感じの位置にする
 export const PlaybackSection = () => {
   // console.log("Headerレンダリング");
   const {PlayFuncs, StopFuncs} = useGetSoundPlayer();
@@ -119,7 +118,7 @@ export const PlaybackSection = () => {
   }
 
   const playChordDisplayStyle = {
-    backgroundColor: "rgb(200,200,200)",
+    backgroundColor: "#fffaf7",
     width: "95%",
     height: "140px",
     margin: "0 0 0 3px",
@@ -129,16 +128,7 @@ export const PlaybackSection = () => {
     overflowX: "scroll",
   }
 
-  const styleHeader/* :{[key:string]:string} */ = {
-    height: "750px",
-    width: "150px",
-    padding: "10px",
-    backgroundColor: "#5D99C6",
-    position: "fixed",
-    zIndex: "1",
-  }
-
-  const styleButton/* :{[key:string]:string} */ = {
+  const styleButton = {
     width: "120px",
     fontSize: "15px",
   }
@@ -155,7 +145,7 @@ export const PlaybackSection = () => {
     textAlign: "center",
     width: "80px",
     // padding: "18px 0",
-    backgroundColor: "#f3fbff",
+    backgroundColor: "#fffaf7",
     fontWeight: "bold",
     height: "100%",
     padding: "40px 0",
@@ -176,7 +166,7 @@ export const PlaybackSection = () => {
       {/*再生コード表示エリア*/}
       <div style={playChordAreaStyle}>
         <p style={headlineTextStyle}>再生<br/>コード</p>
-        <div style={playChordDisplayStyle}>
+        <div id="playChordDisplayStyle" style={playChordDisplayStyle}>
           <ul id="lined-chords">
             <li id='dummy'>
               <div style={styleDisplayCardDummy}></div>

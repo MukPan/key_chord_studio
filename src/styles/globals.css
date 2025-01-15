@@ -36,9 +36,18 @@ ul {
     border-radius: 8px;
 }
 
+button {
+    background-color: #ffebe2;
+}
+
 #lined-chords {
     display: flex;
     flex-wrap: nowrap;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {
