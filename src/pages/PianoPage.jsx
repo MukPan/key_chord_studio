@@ -22,14 +22,14 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
     alignItems: "center",
   }
 
-  const headlineTextStyle = {
+  let headlineTextStyle = {
     fontSize: "20px",
     marginRight: "10px",
     textAlign: "center",
     width: "80px",
     // padding: "18px 0",
     backgroundColor: "#f3fbff",
-    height: "100%",
+    height: "172px",
     fontWeight: "bold",
   }
 
@@ -64,19 +64,6 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
     padding: "0 0 0 30px",
   }
 
-  const playChordDisplayStyle = {
-    backgroundColor: "rgb(200,200,200)",
-    width: "95%",
-    height: "140px",
-    margin: "0 0 0 3px",
-    padding: "0 0 0 30px",
-    display: "flex",
-    alignItems: "center",
-    overflowX: "scroll",
-  }
-
-
-
   const chordAreaStyle = {
     backgroundColor: "#f3fbff",
     height: "200px",
@@ -100,14 +87,7 @@ export default function PianoPage(props) { //鍵盤を押すことでコード�
       <div id="pianoPage" style={pianoPageStyle}>
 
         {/*再生コード表示エリア*/}
-        <div style={predictChordAreaStyle}>
-          <div id="headlineText" style={headlineTextStyle}>
-            <p>再生<br/>コード</p>
-          </div>
-          <div style={playChordDisplayStyle}>
-            <PlaybackSection/>
-          </div>
-        </div>
+        <PlaybackSection/>
 
         {/*キーボードエリア*/}
         <div id="keyboardArea">

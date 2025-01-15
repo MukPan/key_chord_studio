@@ -128,7 +128,7 @@ export default function PianoControler() {
                 <button style={moveRightButtonStyle} onClick={() => RightParaMove()}>▶︎</button>
                 <button style={moveOctaveLeftButtonStyle} onClick={() => LeftParaMoveOctave()}>octave up<br />◀︎</button>
                 <button style={moveOctaveRightButtonStyle} onClick={() => RightParaMoveOctave()}>octave down<br />▶︎</button>
-                <button style={clearButtonStyle} onClick={() => resetKeys()}>キー選択解除</button>
+                <button style={clearButtonStyle} onClick={() => resetKeys()}>キー選択<br/>解除</button>
                 <button style={turnRightButtonStyle} onClick={() => LeftTurn()}>turn left<br />◀︎</button>
                 <button style={turnLeftButtonStyle} onClick={() => RightTurn()}>turn right<br />▶︎</button>
             </div>

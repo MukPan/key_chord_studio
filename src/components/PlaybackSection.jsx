@@ -118,8 +118,16 @@ export const PlaybackSection = () => {
 
   }
 
-
-
+  const playChordDisplayStyle = {
+    backgroundColor: "rgb(200,200,200)",
+    width: "95%",
+    height: "140px",
+    margin: "0 0 0 3px",
+    padding: "0 0 0 30px",
+    display: "flex",
+    alignItems: "center",
+    overflowX: "scroll",
+  }
 
   const styleHeader/* :{[key:string]:string} */ = {
     height: "750px",
@@ -131,32 +139,54 @@ export const PlaybackSection = () => {
   }
 
   const styleButton/* :{[key:string]:string} */ = {
-    position: "relative",
-    top: "20px",
-    left: "4px",
     width: "120px",
-    fontSize: "10px",
+    fontSize: "15px",
+  }
+
+  const playChordAreaStyle = {
+    marginBottom: "20px",
+    display: "flex",
+    alignItems: "center",
+  }
+
+  const headlineTextStyle = {
+    fontSize: "20px",
+    margin: "0 10px 0 0",
+    textAlign: "center",
+    width: "80px",
+    // padding: "18px 0",
+    backgroundColor: "#f3fbff",
+    fontWeight: "bold",
+    height: "100%",
+    padding: "40px 0",
   }
 
 
 
   return (
     <>
-      <Button variant="success" style={styleButton} onClick={playDisplay}>再生
-        <div>sキー</div>
-      </Button>
-      <Button variant="danger" style={styleButton} onClick={cleanDisplay}>リセット
-        <div>cキー</div>
-      </Button>
-      <div>
-        <ul id="lined-chords">
-          <li id='dummy'>
-            <div style={styleDisplayCardDummy}></div>
-          </li>
-          {/* ダミー */}
-        </ul>
+      <div style={{marginLeft: "90.79px"}}>
+        <Button variant="success" style={styleButton} onClick={playDisplay}>再生
+          <div>sキー</div>
+        </Button>
+        <Button variant="danger" style={styleButton} onClick={cleanDisplay}>リセット
+          <div>cキー</div>
+        </Button>
       </div>
-      {/*<div id="adjust"></div>*/}
+      {/*再生コード表示エリア*/}
+      <div style={playChordAreaStyle}>
+        <p style={headlineTextStyle}>再生<br/>コード</p>
+        <div style={playChordDisplayStyle}>
+          <ul id="lined-chords">
+            <li id='dummy'>
+              <div style={styleDisplayCardDummy}></div>
+            </li>
+            {/* ダミー */}
+          </ul>
+        </div>
+        {/*<div id="adjust"></div>*/}
+      </div>
+
     </>
   )
 };
